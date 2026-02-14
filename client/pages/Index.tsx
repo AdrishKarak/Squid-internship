@@ -1,8 +1,52 @@
 export default function Index() {
   return (
-    <div className="bg-black text-white overflow-hidden">
+    <div className="bg-black text-white overflow-hidden relative">
+      {/* Global Dark Background with Animated Dots */}
+      <div className="fixed inset-0 -z-50 bg-black">
+        {/* Main dark gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-black to-gray-950 opacity-60"></div>
+
+        {/* Animated Dots Field */}
+        <svg className="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 1440 900">
+          <defs>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          {/* Random dot pattern */}
+          <circle cx="120" cy="150" r="2" fill="white" opacity="0.8" filter="url(#glow)"/>
+          <circle cx="340" cy="230" r="1.5" fill="pink" opacity="0.6"/>
+          <circle cx="560" cy="120" r="2.5" fill="purple" opacity="0.7"/>
+          <circle cx="800" cy="380" r="1.5" fill="blue" opacity="0.5"/>
+          <circle cx="950" cy="200" r="2" fill="white" opacity="0.7"/>
+          <circle cx="1200" cy="450" r="1.5" fill="cyan" opacity="0.6"/>
+          <circle cx="1100" cy="100" r="2" fill="purple" opacity="0.6"/>
+          <circle cx="280" cy="550" r="1.5" fill="pink" opacity="0.5"/>
+          <circle cx="650" cy="680" r="2" fill="white" opacity="0.6"/>
+          <circle cx="1300" cy="750" r="1.5" fill="purple" opacity="0.7"/>
+          <circle cx="200" cy="800" r="2.5" fill="pink" opacity="0.5"/>
+          <circle cx="500" cy="750" r="1.5" fill="white" opacity="0.5"/>
+          <circle cx="900" cy="800" r="2" fill="blue" opacity="0.6"/>
+          <circle cx="1250" cy="600" r="1.5" fill="white" opacity="0.7"/>
+          <circle cx="400" cy="400" r="2" fill="cyan" opacity="0.5"/>
+          <circle cx="750" cy="300" r="1.5" fill="purple" opacity="0.6"/>
+          <circle cx="1050" cy="500" r="2" fill="pink" opacity="0.6"/>
+          <circle cx="150" cy="450" r="1.5" fill="white" opacity="0.6"/>
+          <circle cx="600" cy="50" r="2.5" fill="purple" opacity="0.5"/>
+          <circle cx="1150" cy="350" r="1.5" fill="blue" opacity="0.7"/>
+        </svg>
+
+        {/* Subtle animated radial gradients */}
+        <div className="absolute top-20 right-40 w-96 h-96 bg-gradient-radial from-purple-900/20 to-transparent rounded-full blur-[120px] opacity-40 animate-pulse"></div>
+        <div className="absolute bottom-40 left-20 w-80 h-80 bg-gradient-radial from-blue-900/20 to-transparent rounded-full blur-[100px] opacity-30 animate-pulse" style={{ animationDelay: "2s" }}></div>
+        <div className="absolute top-1/2 left-1/3 w-96 h-96 bg-gradient-radial from-pink-900/15 to-transparent rounded-full blur-[150px] opacity-20"></div>
+      </div>
       {/* Header */}
-      <header className="relative z-50 px-6 md:px-12 lg:px-24 py-6">
+      <header className="relative z-40 px-6 md:px-12 lg:px-24 py-6 border-b border-gray-900/50 backdrop-blur-sm">
         <div className="max-w-[1440px] mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -47,8 +91,8 @@ export default function Index() {
         <div className="absolute top-20 right-1/4 w-2 h-2 bg-pink-400 rounded-full opacity-40 animate-pulse"></div>
         <div className="absolute top-1/3 left-1/4 w-3 h-3 bg-purple-400 rounded-full opacity-30"></div>
         <div className="absolute bottom-1/4 right-1/3 w-2 h-2 bg-blue-400 rounded-full opacity-40 animate-pulse"></div>
-        
-        <div className="max-w-[1440px] mx-auto">
+
+        <div className="max-w-[1440px] mx-auto relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               Beautiful Landing Page<br />Design for You
@@ -144,8 +188,13 @@ export default function Index() {
       </div>
 
       {/* Feature Boxes Section */}
-      <section className="relative px-6 md:px-12 lg:px-24 py-24 bg-black">
-        <div className="max-w-[1440px] mx-auto">
+      <section className="relative px-6 md:px-12 lg:px-24 py-24 bg-black overflow-hidden">
+        {/* Decorative dots for this section */}
+        <div className="absolute top-10 right-20 w-2 h-2 bg-pink-500 rounded-full opacity-60 animate-pulse"></div>
+        <div className="absolute top-1/3 left-10 w-3 h-3 bg-purple-500 rounded-full opacity-50"></div>
+        <div className="absolute bottom-20 right-1/3 w-2 h-2 bg-cyan-400 rounded-full opacity-40 animate-pulse" style={{ animationDelay: "1.5s" }}></div>
+
+        <div className="max-w-[1440px] mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Feature Boxes</h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -221,8 +270,13 @@ export default function Index() {
       </section>
 
       {/* Help Section with Icons */}
-      <section className="relative px-6 md:px-12 lg:px-24 py-24">
-        <div className="max-w-[1440px] mx-auto">
+      <section className="relative px-6 md:px-12 lg:px-24 py-24 overflow-hidden">
+        {/* Section dots */}
+        <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-purple-400 rounded-full opacity-40 animate-pulse"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-3 h-3 bg-pink-400 rounded-full opacity-50"></div>
+        <div className="absolute top-1/2 right-10 w-2 h-2 bg-blue-400 rounded-full opacity-35"></div>
+
+        <div className="max-w-[1440px] mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left side - Animated Icons */}
             <div className="relative h-96">
@@ -268,8 +322,13 @@ export default function Index() {
       </section>
 
       {/* Companies Section */}
-      <section className="relative px-6 md:px-12 lg:px-24 py-24 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-[1440px] mx-auto">
+      <section className="relative px-6 md:px-12 lg:px-24 py-24 bg-gradient-to-b from-black to-gray-900 overflow-hidden">
+        {/* Decorative dots */}
+        <div className="absolute top-20 left-1/3 w-2 h-2 bg-cyan-400 rounded-full opacity-50 animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-3 h-3 bg-purple-500 rounded-full opacity-40"></div>
+        <div className="absolute top-1/2 right-20 w-2 h-2 bg-pink-400 rounded-full opacity-60 animate-pulse" style={{ animationDelay: "0.5s" }}></div>
+
+        <div className="max-w-[1440px] mx-auto relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Companies we Worked<br />With in Since 2015
           </h2>
@@ -284,8 +343,12 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative px-6 md:px-12 lg:px-24 py-16">
-        <div className="max-w-[1440px] mx-auto">
+      <section className="relative px-6 md:px-12 lg:px-24 py-16 overflow-hidden">
+        {/* Background dots */}
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-purple-400 rounded-full opacity-40 animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-3 h-3 bg-pink-400 rounded-full opacity-35"></div>
+
+        <div className="max-w-[1440px] mx-auto relative z-10">
           <div className="relative bg-gradient-to-r from-pink-400 via-pink-300 to-purple-500 rounded-3xl overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-12 lg:p-16">
               {/* Left side */}
@@ -319,7 +382,12 @@ export default function Index() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="relative px-6 md:px-12 lg:px-24 py-24">
+      <section className="relative px-6 md:px-12 lg:px-24 py-24 overflow-hidden">
+        {/* Decorative dots */}
+        <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-pink-400 rounded-full opacity-50 animate-pulse"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-purple-400 rounded-full opacity-40"></div>
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 bg-blue-400 rounded-full opacity-35 animate-pulse" style={{ animationDelay: "1s" }}></div>
+
         {/* Decorative Grid */}
         <div className="absolute left-0 bottom-0 w-1/3 h-96 opacity-5">
           <svg className="w-full h-full" viewBox="0 0 400 400">
@@ -335,7 +403,7 @@ export default function Index() {
           </svg>
         </div>
 
-        <div className="max-w-[1440px] mx-auto">
+        <div className="max-w-[1440px] mx-auto relative z-10">
           <div className="max-w-md mx-auto text-center lg:text-left lg:ml-auto lg:mr-0">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h2>
             <p className="text-gray-400 mb-8">
@@ -370,8 +438,12 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="relative px-6 md:px-12 lg:px-24 py-16 border-t border-gray-900">
-        <div className="max-w-[1440px] mx-auto">
+      <footer className="relative px-6 md:px-12 lg:px-24 py-16 border-t border-gray-800/50 backdrop-blur-sm overflow-hidden">
+        {/* Footer dots */}
+        <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-purple-400 rounded-full opacity-40 animate-pulse"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-2 h-2 bg-pink-400 rounded-full opacity-35"></div>
+
+        <div className="max-w-[1440px] mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
             {/* Brand */}
             <div className="lg:col-span-2">
