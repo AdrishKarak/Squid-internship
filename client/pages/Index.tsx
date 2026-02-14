@@ -22,10 +22,31 @@ export default function Index() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative px-6 md:px-12 lg:px-24 pt-20 pb-32">
-        {/* Gradient Blobs */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-purple-600 rounded-full blur-[150px] opacity-20"></div>
-        <div className="absolute top-32 left-0 w-96 h-96 bg-pink-600 rounded-full blur-[150px] opacity-20"></div>
+      <section className="relative px-6 md:px-12 lg:px-24 pt-20 pb-32 overflow-hidden">
+        {/* Multiple Gradient Layers */}
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 via-transparent to-black"></div>
+
+        {/* Animated Background Elements */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-purple-600 via-purple-500 to-transparent rounded-full blur-[200px] opacity-30 animate-pulse"></div>
+        <div className="absolute top-32 -left-48 w-[500px] h-[500px] bg-gradient-to-br from-pink-600 via-pink-500 to-transparent rounded-full blur-[180px] opacity-25 animate-pulse" style={{ animationDelay: "1s" }}></div>
+        <div className="absolute -bottom-32 right-1/3 w-[400px] h-[400px] bg-gradient-to-tl from-blue-600/20 to-transparent rounded-full blur-[150px] opacity-20"></div>
+
+        {/* Decorative Grid */}
+        <div className="absolute inset-0 opacity-5">
+          <svg className="w-full h-full" viewBox="0 0 1440 800">
+            <defs>
+              <pattern id="grid-pattern" width="80" height="80" patternUnits="userSpaceOnUse">
+                <path d="M 80 0 L 0 0 0 80" fill="none" stroke="white" strokeWidth="0.5"/>
+              </pattern>
+            </defs>
+            <rect width="1440" height="800" fill="url(#grid-pattern)"/>
+          </svg>
+        </div>
+
+        {/* Floating Dots */}
+        <div className="absolute top-20 right-1/4 w-2 h-2 bg-pink-400 rounded-full opacity-40 animate-pulse"></div>
+        <div className="absolute top-1/3 left-1/4 w-3 h-3 bg-purple-400 rounded-full opacity-30"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-2 h-2 bg-blue-400 rounded-full opacity-40 animate-pulse"></div>
         
         <div className="max-w-[1440px] mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -36,16 +57,16 @@ export default function Index() {
               A great design is not only aesthetically pleasing, but also functional. It should be able to solve the problem
             </p>
             <button className="bg-gradient-brand text-white px-8 py-4 rounded-lg text-base font-medium hover:opacity-90 transition inline-block">
-              Explore More
+              Login
             </button>
           </div>
 
           {/* Dashboard Mockup */}
           <div className="relative max-w-5xl mx-auto">
-            {/* Pink gradient blob left */}
-            <div className="absolute -left-32 top-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full blur-3xl opacity-40 -z-10"></div>
-            {/* Purple gradient blob right */}
-            <div className="absolute -right-32 top-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full blur-3xl opacity-40 -z-10"></div>
+            {/* Enhanced gradient blobs with animation */}
+            <div className="absolute -left-32 top-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-pink-400 via-pink-500 to-pink-600 rounded-full blur-[120px] opacity-50 -z-10 animate-pulse"></div>
+            <div className="absolute -right-32 top-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-purple-500 via-purple-600 to-purple-800 rounded-full blur-[120px] opacity-50 -z-10 animate-pulse" style={{ animationDelay: "2s" }}></div>
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-conic from-pink-500 via-purple-600 to-pink-500 rounded-full blur-[200px] opacity-10 -z-10"></div>
             
             <div className="bg-gradient-to-b from-gray-900 to-black rounded-3xl p-8 border border-gray-800 shadow-2xl">
               <div className="grid grid-cols-3 gap-6">
