@@ -4,10 +4,10 @@ export default function Index() {
       {/* Global Dark Background with Animated Dots */}
       <div className="fixed inset-0 -z-50 bg-black">
         {/* Main dark gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-black to-gray-950 opacity-60"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-black to-gray-950 opacity-90"></div>
 
         {/* Animated Dots Field */}
-        <svg className="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 1440 900">
+        <svg className="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 1440 900">
           <defs>
             <filter id="glow">
               <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
@@ -41,9 +41,9 @@ export default function Index() {
         </svg>
 
         {/* Subtle animated radial gradients */}
-        <div className="absolute top-20 right-40 w-96 h-96 bg-gradient-radial from-purple-900/20 to-transparent rounded-full blur-[120px] opacity-40 animate-pulse"></div>
-        <div className="absolute bottom-40 left-20 w-80 h-80 bg-gradient-radial from-blue-900/20 to-transparent rounded-full blur-[100px] opacity-30 animate-pulse" style={{ animationDelay: "2s" }}></div>
-        <div className="absolute top-1/2 left-1/3 w-96 h-96 bg-gradient-radial from-pink-900/15 to-transparent rounded-full blur-[150px] opacity-20"></div>
+        <div className="absolute top-20 right-40 w-96 h-96 bg-gradient-radial from-purple-900/10 to-transparent rounded-full blur-[120px] opacity-15 animate-pulse"></div>
+        <div className="absolute bottom-40 left-20 w-80 h-80 bg-gradient-radial from-blue-900/10 to-transparent rounded-full blur-[100px] opacity-10 animate-pulse" style={{ animationDelay: "2s" }}></div>
+        <div className="absolute top-1/2 left-1/3 w-96 h-96 bg-gradient-radial from-pink-900/10 to-transparent rounded-full blur-[150px] opacity-8"></div>
       </div>
       {/* Header */}
       <header className="relative z-40 px-6 md:px-12 lg:px-24 py-6 border-b border-gray-900/50 backdrop-blur-sm">
