@@ -57,6 +57,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        brand: {
+          pink: "#FF92C2",
+          purple: "#9747FF",
+        },
+      },
+      backgroundImage: {
+        'gradient-brand': 'linear-gradient(90deg, #FF92C2 0%, #9747FF 100%)',
       },
       borderRadius: {
         lg: "var(--radius)",
