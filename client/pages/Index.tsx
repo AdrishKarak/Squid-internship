@@ -46,7 +46,7 @@ export default function Index() {
         <div className="absolute top-1/2 left-1/3 w-96 h-96 bg-gradient-radial from-pink-900/10 to-transparent rounded-full blur-[150px] opacity-8"></div>
       </div>
       {/* Header */}
-      <header className="relative z-40 px-6 md:px-12 lg:px-24 py-6 border-b border-gray-900/50 backdrop-blur-sm">
+      <header className="relative z-40 px-6 md:px-12 lg:px-24 py-6 border-b border-gray-900/50 backdrop-blur-sm bg-gradient-to-b from-gray-950 via-gray-950/95 to-gray-950/80">
         <div className="max-w-[1440px] mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -66,9 +66,9 @@ export default function Index() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative px-6 md:px-12 lg:px-24 pt-20 pb-32 overflow-hidden">
+      <section className="relative px-6 md:px-12 lg:px-24 pt-20 pb-32 overflow-hidden bg-gradient-to-b from-gray-950/80 via-gray-900/40 to-black">
         {/* Multiple Gradient Layers */}
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 via-transparent to-black"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
 
         {/* Animated Background Elements */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-purple-600 via-purple-500 to-transparent rounded-full blur-[200px] opacity-30 animate-pulse"></div>
